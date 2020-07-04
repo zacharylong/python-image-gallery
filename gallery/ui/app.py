@@ -25,7 +25,7 @@ def storage():
     contents = list_files("edu.au.cc.m5-image-gallery-superunique")
     return render_template('storage.html', contents=contents)
 
-@app.route('/upload', method=['POST'])
+@app.route('/upload', methods=['POST'])
 def upload():
     if request.method == "POST":
         f = request.files['file']
